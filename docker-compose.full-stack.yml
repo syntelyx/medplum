@@ -1,7 +1,7 @@
 services:
   postgres:
     image: postgres:16
-    restart: unless-stopped # for production usage, consider using 'always'
+    restart: always # for production usage, consider using 'always'
     environment:
       - POSTGRES_USER=medplum
       - POSTGRES_PASSWORD=medplum
