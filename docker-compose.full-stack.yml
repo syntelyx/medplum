@@ -103,7 +103,7 @@ services:
       medplum-server:
         condition: service_healthy
     ports:
-      - '3000:3000'
+      - '3004:3000'
     healthcheck:
       test: ['CMD', 'curl', '-f', 'http://localhost:3000']
       interval: 10s

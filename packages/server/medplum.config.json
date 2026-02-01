@@ -27,12 +27,14 @@
   },
   "redis": {
     "host": "localhost",
-    "port": 6379,
-    "password": "medplum"
+    "port": 6379
   },
   "bullmq": {
     "removeOnFail": { "count": 1 },
     "removeOnComplete": { "count": 1 }
+  },
+  "subscriptions": {
+    "websocket": true
   },
   "shutdownTimeoutMilliseconds": 30000
 }
