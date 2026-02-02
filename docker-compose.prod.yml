@@ -110,6 +110,12 @@ services:
         condition: service_healthy
     ports:
       - '3004:3000'
+    environment:
+      MEDPLUM_BASE_URL: '${MEDPLUM_BASE_URL:-http://localhost:8103/}'
+      MEDPLUM_CLIENT_ID: '${MEDPLUM_CLIENT_ID:-}'
+      GOOGLE_CLIENT_ID: '${GOOGLE_CLIENT_ID:-397236612778-c0b5tnjv98frbo1tfuuha5vkme3cmq4s.apps.googleusercontent.com}'
+      RECAPTCHA_SITE_KEY: '${RECAPTCHA_SITE_KEY:-6LfHdsYdAAAAAC0uLnnRrDrhcXnziiUwKd8VtLNq}'
+      MEDPLUM_REGISTER_ENABLED: '${MEDPLUM_REGISTER_ENABLED:-true}'
     healthcheck:
       test: ['CMD', 'curl', '-f', 'http://localhost:3000']
       interval: 10s
