@@ -110,3 +110,9 @@ services:
 
 volumes:
   medplum-postgres-data:
+
+
+# Add at the top level (same level as services)
+networks:
+  default:
+    driver: bridge
